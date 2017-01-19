@@ -24,8 +24,8 @@ def touch(filepath):
     isExists=os.path.exists(filepath)
 
     if not isExists:
-        f = os.open(filepath, os.O_CREAT)
-        os.close(f)
+        f = open(filepath, 'w')
+        f.close()
         print filepath+' is created'
         return True
     else:

@@ -9,7 +9,7 @@ rmtree('./result')
 pattern = re.compile('\s+')
 
 site = 'http://tianqihoubao.com'
-homePage = urllib2.urlopen(site + '/lishi/').read().decode('gbk').encode('utf8')
+homePage = urllib2.urlopen(site + '/lishi/').read().decode('gbk').encode('utf8').replace('<wbr>', '')
 
 homePageHtml = etree.HTML(homePage, parser=etree.HTMLParser(encoding='utf8'))
 
