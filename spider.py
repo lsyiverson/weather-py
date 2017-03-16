@@ -76,6 +76,7 @@ for provinceElmTree in provinceElementXPath:
             append(filepath, monthlyData)
             print provinceName + cityName + monthstr + u' 下载成功'
 workbook.save('./result/weather.xlsx')
+print u'导出Excel成功'
 
 
 
